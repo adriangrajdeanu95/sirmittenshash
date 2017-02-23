@@ -1,4 +1,5 @@
 #include "mainstruct.h"
+#define MAXREQ 1000000
 
 req_description current_requests[MAXREQ];
     cache current_cache[1000];

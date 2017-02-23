@@ -1,6 +1,7 @@
 #include <fstream>
 #include "mainstruct.h"
 #include "readit.h"
+#include "greedee.h"
 #define MAXREQ 1000000
 
 using namespace std;
@@ -19,7 +20,7 @@ void sort_ep_caches(endpoint myep[], int e)
                     myep[i].cache_latency[k] = myep[i].cache_latency[j];
                     myep[i].cache_latency[j] = aux;
 
-                    int aux = myep[i].cache[k];
+                    aux = myep[i].cache[k];
                     myep[i].cache[k] = myep[i].cache[j];
                     myep[i].cache[j] = aux;
                 }
