@@ -4,7 +4,7 @@ using namespace std;
 
 void citire(int *v,int *e,int *r,int *c,int *cache_size,int videos[],endpoint current_endpoints[],req_description current_requests[])
 {
-    ifstream f("input.in");
+    ifstream f("kittens.in");
     int i,j;
 
     f >> *v >> *e >> *r >> *c >> *cache_size;
