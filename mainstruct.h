@@ -1,5 +1,3 @@
- #include<fstream>
-
 
     struct req_description
     {
@@ -22,6 +20,3 @@
         int cache[1000];
         int cache_latency[1000];
     };
-
-    ifstream f("input.in");
-    ofstream g("output.out");
