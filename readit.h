@@ -28,6 +28,7 @@ void citire(int *v,int *e,int *r,int *c,int *cache_size,int videos[],endpoint cu
         if (videos[current_requests[i].video] > *cache_size)
         {
             i--;
+            (*r)--;
         }
     }
 
