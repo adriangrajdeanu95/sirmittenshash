@@ -20,4 +20,6 @@
         int cache_nr;
         int cache[1000];
         int cache_latency[1000];
-    }
+
+    };
+
