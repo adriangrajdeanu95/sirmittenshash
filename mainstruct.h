@@ -7,7 +7,7 @@
 
     struct cache{
         int videos[10000];
-        size_left;
-        endpoints[1000];
+        int size_left;
+        int endpoints[1000];
         };
 
