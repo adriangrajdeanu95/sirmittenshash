@@ -66,5 +66,25 @@ int main()
 
     citire(&v, &e, &r, &c, &cache_size, videos, current_endpoints, current_requests);
     init_cache(current_endpoints, current_cache, c, cache_size, e);
+
+    ofstream g("output.out")
+
+    int i,j;
+    g << caches_used(&c, &cache_size, current_cache); << "\n";
+    for (i=0; i<c; i++)
+    {
+    	if (current_cache[i].size_left < cache_size)
+    	{
+    		g << i << " ";
+    		for (j=0; j<v; j++)
+    		{
+    			if (current_cache[i].videos[j])
+    			{
+    				g << j << " ";
+    			}
+    		}
+    		g << "\n";
+    	}
+    }
     return 0;
 }
