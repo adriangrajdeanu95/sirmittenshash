@@ -1,10 +1,32 @@
 #include <fstream>
 #include "mainstruct.h"
 #include "readit.h"
-
 #define MAXREQ 1000000
 
 using namespace std;
+
+void sort_ep_caches(endpoint myep[], int e)
+{
+    for (int i=0; i<e; i++)
+    {
+        for (int j; j<myep[i].cache_nr-1; j++)
+        {
+            for (int k = j+1; k<myep[i].cache_nr; k++)
+            {
+                if (myep[i].cache_latency[k]>myep[i].cache_latency[j])
+                {
+                    int aux = myep[i].cache_latency[k];
+                    myep[i].cache_latency[k] = myep[i].cache_latency[j];
+                    myep[i].cache_latency[j] = aux;
+
+                    int aux = myep[i].cache[k];
+                    myep[i].cache[k] = myep[i].cache[j];
+                    myep[i].cache[j] = aux;
+                }
+            }
+        }
+    }
+}
 
 void init_cache(endpoint myep[], cache mycache[], int c, int cs, int e)
 {
