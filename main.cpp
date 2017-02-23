@@ -1,5 +1,6 @@
 #include <fstream>
 #include "mainstruct.h"
+#include "readit.h"
 
 #define MAXREQ 1000000
 
