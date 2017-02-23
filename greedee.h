@@ -33,3 +33,14 @@ void GREEDEE(int *v, int *e, int *r, int *c, int *cache_size, endpoint current_e
     }
 
 }
+
+int caches_used(int *c, int *cache_size, cache current_cache[])
+{
+    int nr=0,i;
+    for (i=0; i<(*c); i++)
+    {
+        if (current_cache[i].size_left < *cache_size)
+            nr ++;
+    }
+    return nr;
+}
